@@ -1,0 +1,28 @@
+class AnimalKind:
+    def __init__(self, animal, kind):
+        self.animal = animal
+        self.kind = kind
+
+class About:
+    about_amount=0
+    def __init__(self, animal, kind, weight, width, height, length, age):
+        self.ak = AnimalKind (animal, kind)
+        self.weight = weight
+        self.width = width
+        self.height = height
+        self.length = length
+        self.age = age
+        About.about_amount += 1
+
+    def printAbout(self):
+        print(f'animal: {self.ak.animal}')
+        print(f'kind: {self.ak.kind}')
+        print(f'weight: {self.weight}')
+        print(f'width: {self.width}')
+        print(f'height: {self.height}')
+        print(f'length: {self.length}')
+        print(f'age: {self.age}')
+
+print(f'before creating About object {About.about_amount}')
+first_about = About ("tiger", "wild", 45, 80, 70, 170, 6)
+first_about.printAbout()
